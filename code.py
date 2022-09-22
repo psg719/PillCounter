@@ -7,7 +7,7 @@ import os
 from PIL import Image
 
 #connect to sqlite db
-conn = sqlite3.connect('drugapr21.sqlite',check_same_thread=False)
+conn = sqlite3.connect(input("enter sqlite db path here"),check_same_thread=False)
 
 #connect to dropbox
 access_token = input("Enter your Dropbox access token here")
@@ -15,8 +15,6 @@ dbx = dropbox.Dropbox(access_token)
 
 #directory
 directory = os.getcwd()
-
-
 
 def count():
     med_barcode = str(input("Please scan medication barcode..."))
